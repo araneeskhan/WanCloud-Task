@@ -1,70 +1,126 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# User Data Management 👤
 
-## Available Scripts
+User Data Management is a React-based web application designed to manage user data. It allows you to add, view, and delete user records, making it a perfect solution for small user management tasks. With real-time form validation, error handling, and smooth navigation, this app ensures a seamless user experience.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Management**: Add new users with details such as name, address, company, and telephone.
+- **Form Validation**: Includes comprehensive field validations to ensure correct data entry.
+- **Dynamic User List**: Displays all users in a table format with options to delete users.
+- **Toast Notifications**: Provides feedback to users with success and error messages.
+- **Responsive Design**: Optimized for different screen sizes, offering a smooth user interface.
+- **Routing and Navigation**: Utilizes React Router to handle navigation between adding users and viewing the user list.
+- **Redux State Management**: Uses Redux to manage and persist user data in the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: A powerful JavaScript library for building user interfaces.
+- **Redux**: A state management tool to handle global state and actions for adding and deleting users.
+- **React Router**: Enables dynamic routing for navigation between different pages.
+- **CSS**: Custom styles for layout and form design.
+- **Toastify**: For showing toast notifications on success or failure.
+- **React-Redux**: To integrate Redux with React components for easy state management.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the WanCloud User Data Management application, follow the steps below:
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensure you have [Node.js](https://nodejs.org/en/) installed. You can check your Node.js version by running the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+node -v
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    git clone https://github.com/araneeskhan/WanCloud-Task.git
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd WanCloud-Task
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
 
-## Learn More
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Run the application:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+    ```
 
-### Code Splitting
+The app should now be running on [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Folder Structure
 
-### Analyzing the Bundle Size
+```
+WanCloud-Task/
+│
+├── public/
+│   └── index.html               # HTML template
+│
+├── src/
+│   ├── components/              # Contains all the UI components like Layout, UserForm, UserList
+│   ├── store/                   # Redux store and slice to manage user data
+│   ├── App.js                   # Main React component that sets up routes and state
+│   ├── index.js                 # Entry point for React application
+│   └── styles/                  # Custom CSS for styling components
+│
+├── package.json                 # Dependencies and scripts
+└── README.md                    # Project documentation
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How It Works
 
-### Making a Progressive Web App
+### 1. **UserForm Component**
+   - Collects user information like `First Name`, `Last Name`, `Address`, `Company`, and `Telephone`.
+   - Implements client-side validation with real-time error messages.
+   - Once the form is successfully submitted, the user data is dispatched to Redux for storage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. **UserList Component**
+   - Displays a table of all users stored in Redux.
+   - Allows deletion of users by clicking on the "Delete" button next to each record.
 
-### Advanced Configuration
+### 3. **Layout Component**
+   - Provides a clean and responsive layout with a sidebar containing links to "Add User" and "View Users" pages.
+   - Utilizes React Router's `Outlet` to render child components based on the active route.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. **Redux Store**
+   - A global state is managed using Redux, with actions to add and delete users.
+   - The state is stored in a slice `userSlice` for easier management.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+We welcome contributions to this project. If you would like to contribute, please follow the steps below:
 
-### `npm run build` fails to minify
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`.
+3. Make your changes and commit them: `git commit -m 'Add your feature'`.
+4. Push to your forked repository: `git push origin feature/your-feature`.
+5. Open a pull request to the main repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- **React**: For providing a fast and flexible framework to build UIs.
+- **Redux**: For easy global state management.
+- **React Router**: For enabling dynamic routing in React.
+- **Toastify**: For providing beautiful and customizable toast notifications.
+  
+---
+
+This `README.md` includes all essential details for understanding, setting up, and contributing to the project. It's structured for ease of understanding, from features to installation instructions, and neatly presents the information.
