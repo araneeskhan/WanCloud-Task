@@ -20,7 +20,7 @@ User Data Management is a React-based web application designed to manage user da
 - **React Router**: Enables dynamic routing for navigation between different pages.
 - **CSS**: Custom styles for layout and form design.
 - **Toastify**: For showing toast notifications on success or failure.
-- **React-Redux**: To integrate Redux with React components for easy state management.
+- **React-Redux**: To integrate Redux with React components for easy state management and data persistance.
 
 ## Installation
 
@@ -110,9 +110,6 @@ We welcome contributions to this project. If you would like to contribute, pleas
 4. Push to your forked repository: `git push origin feature/your-feature`.
 5. Open a pull request to the main repository.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
